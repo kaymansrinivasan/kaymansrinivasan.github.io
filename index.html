@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayman Srinivasan — AI & Data Science</title>
+  <meta name="description"
+    content="Portfolio of Kayman Srinivasan — AI, NLP, and Data Science engineer based in Malaysia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NEURAL NET CANVAS -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- CURSOR -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-trail" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-wordmark">KS</div>
+    <ul class="nav-links" role="list">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://linkedin.com/in/kayman-srinivasan-2826b1347/" target="_blank" rel="noopener"
+      class="nav-availability">
+      <span class="availability-dot"></span>
+      Available for internship
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-meta">
+      <span class="mono dim">AI &amp; Data Science · MMU Malaysia · 2025</span>
+    </div>
+
+    <h1 class="hero-name">
+      <span class="name-first reveal-line">Kayman</span>
+      <span class="name-last reveal-line">Srinivasan<span class="name-period">.</span></span>
+    </h1>
+
+    <div class="hero-descriptor reveal-up">
+      <em>Building systems that learn, infer, and explain</em>
+    </div>
+
+    <div class="hero-photo-block reveal-up">
+      <div class="photo-frame">
+        <img src="kayman.jpg" alt="Kayman Srinivasan" id="hero-photo" />
+        <div class="photo-scanline" aria-hidden="true"></div>
+      </div>
+      <div class="photo-data" aria-hidden="true">
+        <span class="mono dim">fig_01 / kayman_srinivasan.jpg</span>
+        <span class="mono dim">NLP · TimeSeries · MLOps</span>
+      </div>
+    </div>
+
+    <div class="hero-stats reveal-up">
+      <div class="stat-item">
+        <span class="stat-num" data-target="4">0</span>
+        <span class="stat-label mono">projects shipped</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="23">0</span><span class="stat-suffix">K+</span>
+        <span class="stat-label mono">rows processed (NLP)</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label mono">ML domains</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="work">
+    <div class="section-header">
+      <span class="mono dim section-index">01 /</span>
+      <h2>Selected Work</h2>
+    </div>
+
+    <div class="projects-list">
+
+      <article class="project-row" data-index="01">
+        <div class="project-number mono">01</div>
+        <div class="project-content">
+          <div class="project-top">
+            <h3 class="project-title">PropEase AI</h3>
+            <div class="project-type mono">WhatsApp Lead Automation</div>
+          </div>
+          <p class="project-desc">
+            End-to-end WhatsApp chatbot for Malaysian real estate lead capture. Gemini 2.5 Flash handles multi-turn
+            conversation — extracting buyer intent, budget range, and area preference — then persists structured leads
+            to an analytics dashboard.
+          </p>
+          <div class="project-meta">
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">Meta Cloud API</span>
+              <span class="tech-tag">NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener" class="proj-link mono">GitHub
+                &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="project-diagram">
+            <div class="diagram-node">User</div>
+            <div class="diagram-arrow"></div>
+            <div class="diagram-node accent">Gemini</div>
+            <div class="diagram-arrow"></div>
+            <div class="diagram-node">Dashboard</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row" data-index="02">
+        <div class="project-number mono">02</div>
+        <div class="project-content">
+          <div class="project-top">
+            <h3 class="project-title">Airlines Sentiment Analysis</h3>
+            <div class="project-type mono">NLP · Transformer Fine-Tuning</div>
+          </div>
+          <p class="project-desc">
+            Fine-tuned DistilBERT on 23,171 airline reviews for aspect-level sentiment classification across six service
+            dimensions. Validated with Spearman correlation against ground-truth ratings; SHAP used for model
+            interpretability.
+          </p>
+          <div class="project-meta">
+            <div class="tech-stack">
+              <span class="tech-tag">DistilBERT</span>
+              <span class="tech-tag">HuggingFace</span>
+              <span class="tech-tag">SHAP</span>
+              <span class="tech-tag">Spearman</span>
+              <span class="tech-tag">PyTorch</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener" class="proj-link mono">GitHub
+                &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="sentiment-bars">
+            <div class="sbar-row"><span class="sbar-label mono">WiFi</span>
+              <div class="sbar">
+                <div class="sbar-fill" style="width:72%;--c:#c8f7e0"></div>
+              </div>
+            </div>
+            <div class="sbar-row"><span class="sbar-label mono">Food</span>
+              <div class="sbar">
+                <div class="sbar-fill" style="width:58%;--c:#c8f7e0"></div>
+              </div>
+            </div>
+            <div class="sbar-row"><span class="sbar-label mono">Seat</span>
+              <div class="sbar">
+                <div class="sbar-fill" style="width:81%;--c:#c8f7e0"></div>
+              </div>
+            </div>
+            <div class="sbar-row"><span class="sbar-label mono">Staff</span>
+              <div class="sbar">
+                <div class="sbar-fill" style="width:64%;--c:#c8f7e0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row" data-index="03">
+        <div class="project-number mono">03</div>
+        <div class="project-content">
+          <div class="project-top">
+            <h3 class="project-title">Energy Consumption Forecasting</h3>
+            <div class="project-type mono">Time Series · Predictive Modeling</div>
+          </div>
+          <p class="project-desc">
+            LSTM and Prophet forecasting pipeline for industrial energy consumption. Identifies peak-load windows and
+            enables proactive cost reduction through ahead-of-time scheduling of energy-intensive processes.
+          </p>
+          <div class="project-meta">
+            <div class="tech-stack">
+              <span class="tech-tag">LSTM</span>
+              <span class="tech-tag">Prophet</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Time Series</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener" class="proj-link mono">GitHub
+                &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <svg class="sparkline" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="0,50 20,42 40,48 60,30 80,35 100,18 120,22 140,10 160,16 180,8 200,12" stroke="#c8f7e0"
+              stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="0,50 20,45 40,52 60,40 80,44 100,30 120,35 140,28 160,32 180,25 200,28" stroke="#888"
+              stroke-width="1" fill="none" stroke-dasharray="4 3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <div class="sparkline-legend mono">
+            <span style="color:#c8f7e0">&#9472; predicted</span>
+            <span style="color:#888">&#8943; actual</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row" data-index="04">
+        <div class="project-number mono">04</div>
+        <div class="project-content">
+          <div class="project-top">
+            <h3 class="project-title">Financial Fraud Detection</h3>
+            <div class="project-type mono">XGBoost · Explainability</div>
+          </div>
+          <p class="project-desc">
+            XGBoost classifier for transaction fraud detection targeted at Malaysian banking and fintech. SHAP values
+            provide per-transaction explainability — producing interpretable audit trails required for regulatory
+            compliance.
+          </p>
+          <div class="project-meta">
+            <div class="tech-stack">
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">SHAP</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">EDA</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener" class="proj-link mono">GitHub
+                &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="shap-visual">
+            <div class="shap-row"><span class="mono" style="font-size:11px;color:#888">amount</span>
+              <div class="shap-bar pos" style="width:85%"></div>
+            </div>
+            <div class="shap-row"><span class="mono" style="font-size:11px;color:#888">freq</span>
+              <div class="shap-bar pos" style="width:60%"></div>
+            </div>
+            <div class="shap-row"><span class="mono" style="font-size:11px;color:#888">location</span>
+              <div class="shap-bar neg" style="width:40%"></div>
+            </div>
+            <div class="shap-row"><span class="mono" style="font-size:11px;color:#888">time</span>
+              <div class="shap-bar neg" style="width:25%"></div>
+            </div>
+            <div class="shap-label mono">SHAP feature importance</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="mono dim section-index">02 /</span>
+      <h2>Capabilities</h2>
+    </div>
+
+    <div class="skills-matrix">
+      <div class="skill-col">
+        <div class="skill-col-title mono">Machine Learning</div>
+        <ul class="skill-items" role="list">
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="90"></span></span><span>DistilBERT / Transformers</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="85"></span></span><span>XGBoost / Gradient Boosting</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="80"></span></span><span>LSTM / Time Series</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="82"></span></span><span>Scikit-learn</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="78"></span></span><span>SHAP Explainability</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title mono">Data Engineering</div>
+        <ul class="skill-items" role="list">
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="92"></span></span><span>Python</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="85"></span></span><span>Pandas / NumPy</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="75"></span></span><span>SQL</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="70"></span></span><span>Power BI</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="80"></span></span><span>EDA &amp; Feature Engineering</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title mono">Engineering</div>
+        <ul class="skill-items" role="list">
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="82"></span></span><span>Flask / REST API</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="78"></span></span><span>Gemini API</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="75"></span></span><span>Meta Cloud API</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="80"></span></span><span>Git &amp; Version Control</span></li>
+          <li class="skill-item"><span class="skill-bar-wrap"><span class="skill-bar-fill"
+                data-width="65"></span></span><span>PyCharm / VS Code</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="mono dim section-index">03 /</span>
+      <h2>About</h2>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-text">
+        <p class="about-lead">
+          Final-year AI &amp; Data Science student at Multimedia University, Malaysia — building production-grade ML
+          systems, not just academic experiments.
+        </p>
+        <p>
+          My work sits at the intersection of language models, time series forecasting, and interpretable machine
+          learning. I care about systems that not only perform well but can be understood and audited — particularly
+          important in finance and enterprise AI.
+        </p>
+        <p>
+          I am seeking a Data Analyst or BI Analyst internship (July &ndash; October 2025) with banks, fintech firms, or
+          consulting companies in Malaysia.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener"
+            class="about-link mono">github.com/kaymansrinivasan</a>
+          <a href="https://linkedin.com/in/kayman-srinivasan-2826b1347/" target="_blank" rel="noopener"
+            class="about-link mono">linkedin.com/in/kayman-srinivasan</a>
+        </div>
+      </div>
+      <div class="about-terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+          <span class="mono" style="font-size:11px;color:#555;margin-left:8px">kayman@mmu ~ </span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt mono">$</span> <span class="mono t-cmd">python profile.py</span>
+          </div>
+          <div class="t-line t-out mono">Loading Kayman Srinivasan...</div>
+          <div class="t-line t-out mono">{</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;"role": "AI & DS Engineer",</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;"university": "MMU Malaysia",</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;"status": "open_to_work",</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;"domains": [</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;&nbsp;&nbsp;"NLP", "Time Series",</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;&nbsp;&nbsp;"XAI", "MLOps"</div>
+          <div class="t-line t-out mono">&nbsp;&nbsp;]</div>
+          <div class="t-line t-out mono">}</div>
+          <div class="t-line"><span class="t-prompt mono">$</span> <span class="t-cursor mono">_</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="mono dim section-index">04 /</span>
+      <h2>Contact</h2>
+    </div>
+
+    <div class="contact-layout">
+      <p class="contact-lead">
+        Open to internship conversations &mdash;<br />
+        <em>reach out and let's talk data.</em>
+      </p>
+      <div class="contact-methods">
+        <a href="mailto:kayman@email.com" class="contact-row-item">
+          <span class="mono dim">email</span>
+          <span class="contact-value">kayman@email.com</span>
+        </a>
+        <a href="https://linkedin.com/in/kayman-srinivasan-2826b1347/" target="_blank" rel="noopener"
+          class="contact-row-item">
+          <span class="mono dim">linkedin</span>
+          <span class="contact-value">kayman-srinivasan</span>
+        </a>
+        <a href="https://github.com/kaymansrinivasan" target="_blank" rel="noopener" class="contact-row-item">
+          <span class="mono dim">github</span>
+          <span class="contact-value">kaymansrinivasan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono dim">Kayman Srinivasan &nbsp;&middot;&nbsp; AI &amp; Data Science &nbsp;&middot;&nbsp; Malaysia
+      &nbsp;&middot;&nbsp; 2025</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
