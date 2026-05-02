@@ -242,4 +242,85 @@
     }
   });
 
+
+  // ── ENHANCEMENT #4 — HERO NAME SHIMMER ─────────────────────
+  const heroName = document.querySelector('.hero-name');
+  if (heroName) {
+    // Trigger shimmer after the slide-up animations complete (~1.5s)
+    setTimeout(() => {
+      heroName.classList.add('shimmer-active');
+    }, 1800);
+  }
+
+
+  // ── ENHANCEMENT #5 — HERO PHOTO PARALLAX ───────────────────
+  const heroPhoto = document.getElementById('hero-photo');
+  if (heroPhoto) {
+    document.addEventListener('mousemove', e => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 10;
+      const y = (e.clientY / window.innerHeight - 0.5) * 10;
+      heroPhoto.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
+    });
+  }
+
+
+  // ── ENHANCEMENT #6 — SECTION TITLE LETTER REVEAL ───────────
+  document.querySelectorAll('.section-header h2').forEach(h2 => {
+    const text = h2.textContent;
+    h2.textContent = '';
+    h2.setAttribute('aria-label', text);
+
+    [...text].forEach((char, i) => {
+      const span = document.createElement('span');
+      span.classList.add('section-title-letter');
+      if (char === ' ') {
+        span.classList.add('space');
+        span.innerHTML = '&nbsp;';
+      } else {
+        span.textContent = char;
+      }
+      // Stagger delay per letter
+      span.style.transitionDelay = `${i * 0.04}s`;
+      h2.appendChild(span);
+    });
+  });
+
+  // Observe section headers for letter reveal
+  const titleObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.section-title-letter').forEach(letter => {
+          letter.classList.add('revealed');
+        });
+        titleObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.section-header').forEach(el => titleObs.observe(el));
+
+
+  // ── ENHANCEMENT #11 — MAGNETIC NAV LINKS ───────────────────
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('mousemove', e => {
+      const rect = link.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      link.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'translate(0, 0)';
+    });
+  });
+
+
+  // ── ENHANCEMENT #12 — SCROLL PROGRESS BAR ─────────────────
+  const scrollProgress = document.getElementById('scroll-progress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      scrollProgress.style.width = pct + '%';
+    }, { passive: true });
+  }
+
 })();
